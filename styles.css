@@ -1,0 +1,129 @@
+/* Importing Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;800&display=swap');
+
+/* Global reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Root variables for colors */
+:root {
+  --dark-blue: #181F32;
+  --gray: #647299;
+  --red: #D13F30;
+  --dark-gray: #3B4664;
+  --violet: #252D44;
+  --white: #FFF;
+}
+
+/* Main container */
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  background-color: var(--dark-gray);
+}
+
+/* Calculator styles */
+.calculator {
+  width: 30%;
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  gap: 1rem;
+}
+
+/* Display screen styles */
+.display-screen {
+  height: 20%;
+  width: 100%;
+}
+
+.user-input {
+  height: 100%;
+  width: 100%;
+  border-radius: 1rem;
+  border: none;
+  background-color: var(--dark-blue);
+  color: var(--white);
+  text-align: right;
+  padding-right: 5%;
+  font-size: 3rem;
+  overflow-x: scroll;
+}
+
+/* Keypad styles */
+.keypad {
+  height: 70%;
+  width: 100%;
+  padding: 5%;
+  background-color: var(--violet);
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Row styles */
+.row {
+  width: 100%;
+  height: 16%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Key styles */
+.key, .delete-key, .number-key {
+  width: 21%;
+  height: 100%;
+  border-radius: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem; /* Default font size */
+}
+
+.key {
+  background-color: var(--white);
+}
+
+.delete-key {
+  background-color: var(--gray);
+  color: var(--white);
+  letter-spacing: 1.5px;
+}
+
+/* Reset and Answer key styles */
+.reset-key, .answer-key {
+  width: 47%;
+  height: 90%;
+  border-radius: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--white);
+}
+
+.reset-key {
+  background-color: var(--gray);
+  letter-spacing: 1.5px;
+}
+
+.answer-key {
+  background-color: var(--red);
+}
+
+/* Hover styles */
+.key:hover, .delete-key:hover, .reset-key:hover, .answer-key:hover {
+  cursor: pointer;
+}
